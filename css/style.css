@@ -1,0 +1,246 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** 1rem = 10px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.82;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/** Globales **/
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    width: 95%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+
+/** Utilidades **/
+
+.no-margin {
+    margin: 0;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+
+/** Header **/
+
+.site-header {
+    background-image: url(../img/local2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header h1 span {
+    height: 700px;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.logo {
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 1rem;
+}
+
+.texto-header {
+    font-size: 2rem;
+    line-height: 4.5rem;
+    margin-top: 10rem;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .texto-header {
+        margin-top: 25rem;
+    }
+}
+
+
+/** Navegacion **/
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barra a {
+        display: inline-flex;
+        justify-content: space-between;
+        margin-right: 1rem;
+    }
+    .barra a:last-of-type {
+        margin-right: 0;
+    }
+}
+
+
+/** Nosotros **/
+
+.cuerpo-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .cuerpo-nosotros {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .imagen-nosotros {
+        flex-basis: 40%;
+    }
+    .texto-nosotros {
+        flex-basis: calc(60% - 1rem);
+    }
+}
+
+
+/** Servicio **/
+
+.servicios {
+    background-image: url(../img/copiadoras.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 40rem;
+}
+
+.servicios h2 {
+    color: #ffffff;
+}
+
+.texto-servicios {
+    color: #ffffff;
+    padding-top: 10rem;
+    font-size: 2.2rem;
+}
+
+.boton {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    background-color: #8f00e2;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border: none;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.contacto {
+    background-color: black;
+    color: #ffffff;
+    height: 35rem;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        height: 25rem;
+    }
+}
+
+.contacto p {
+    color: #ffffff;
+    font-size: 2.2rem;
+}
+
+
+/** Footer **/
+
+.site-footer {
+    background-color: rgb(69, 0, 134);
+    margin: 0;
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
