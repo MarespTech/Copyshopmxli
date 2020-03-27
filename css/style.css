@@ -208,19 +208,25 @@ a {
 .contacto {
     background-color: black;
     color: #ffffff;
-    height: 35rem;
+    height: 45rem;
 }
 
 @media (min-width: 768px) {
     .contacto {
-        height: 25rem;
+        height: 30rem;
     }
 }
 
 .contacto p {
     color: #ffffff;
     font-size: 2.2rem;
-    line-height: 5px;
+    line-height: 3rem;
+}
+
+@media (min-width: 768px) {
+    .contacto p {
+        line-height: 2rem;
+    }
 }
 
 .contacto p span,
@@ -280,6 +286,9 @@ a {
         flex-basis: calc(33.3% - 1rem);
         border: 2px solid #ddddddee;
         padding: .5rem 0 .5rem .5rem;
+    }
+    .servicio h2 {
+        line-height: 5.5rem;
     }
 }
 
