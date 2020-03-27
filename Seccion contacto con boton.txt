@@ -1,0 +1,6 @@
+    <div class="contacto" id="contacto">
+        <div class="contenedor">
+            <h3 class="fw-300">Realice cotizaciones y pedidos desde su casa</h3>
+            <p>Envia sus archivos llenando un formulario y solo pase por ellos cuando esten listos</p>
+            <a href="contacto.html" class="boton">Contactanos</a>
+        </div>
