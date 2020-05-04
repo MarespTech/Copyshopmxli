@@ -65,11 +65,16 @@ h4 {
 
 .site-header {
     background-image: url(../img/local2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 60rem;
     margin-bottom: 15px;
+    padding: 0;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
@@ -113,6 +118,10 @@ a {
     font-size: 2.2rem;
     display: block;
     text-align: center;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -171,7 +180,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 40rem;
+    height: 35rem;
 }
 
 .servicios h2 {
@@ -196,6 +205,24 @@ a {
     display: block;
     border: none;
     flex: 0 0 100%;
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: #8f00e28e;
+}
+
+
+/* Para cotizar */
+
+.boton-suma {
+    padding: 1rem 2rem;
+    background-color: #e20000;
+}
+
+.boton-suma:hover {
+    background-color: #f03232;
 }
 
 @media (min-width: 768px) {
@@ -208,12 +235,13 @@ a {
 .contacto {
     background-color: black;
     color: #ffffff;
-    height: 45rem;
+    height: 60rem;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .contacto {
-        height: 30rem;
+        height: 40rem;
     }
 }
 
@@ -232,6 +260,10 @@ a {
 .contacto p span,
 .contacto p a {
     color: #8f00e2;
+}
+
+.contacto h3 {
+    padding-top: 1rem
 }
 
 
@@ -274,7 +306,7 @@ a {
     width: 50%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     .contenedor-servicios {
         display: flex;
         flex-wrap: wrap;
@@ -283,7 +315,7 @@ a {
         width: 100%;
     }
     .servicio {
-        flex-basis: calc(33.3% - 1rem);
+        flex-basis: calc(50% - 1rem);
         border: 2px solid #ddddddee;
         padding: .5rem 0 .5rem .5rem;
     }
@@ -292,6 +324,109 @@ a {
     }
 }
 
+@media (min-width: 768px) {
+    .servicio {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
 .no-pad {
     padding: 0;
+}
+
+
+/** Contacto **/
+
+.contenedor-cotizador {
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor-cotizacion {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 2rem;
+        padding-top: 0;
+    }
+    .cotizador {
+        flex-basis: calc(65% - 1rem);
+        margin-right: 2rem;
+    }
+    .resultado {
+        flex-basis: calc(35% - 1rem);
+    }
+}
+
+.botonesC a {
+    margin: 1rem 0;
+}
+
+.botonesC #add {
+    margin-right: .5rem;
+}
+
+.resultado p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cotizador label {
+    font-size: 2rem;
+}
+
+.cotizador label:first-of-type {
+    margin-top: 1rem;
+}
+
+.cotizador label:last-of-type,
+.cotizador #cantidad {
+    margin-bottom: 1rem;
+}
+
+.cotizador select,
+.cotizador input {
+    width: 100%;
+    height: 3.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .cotizador select,
+    .cotizador input {
+        width: 10rem;
+        margin: .5rem;
+    }
+    .cotizador select:first-of-type {
+        width: 30rem;
+    }
+}
+
+.cotizador #cantidad {
+    width: 8rem;
+}
+
+.pedido {
+    border: 1px solid #d6d5d5;
+    background-color: #ececec;
+    padding: .5rem;
+    display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+    .pedido {
+        display: flex;
+    }
+    .seleccion {
+        flex-basis: calc(65% - 2rem);
+    }
+    .cant {
+        margin-left: 1rem;
+        flex-basis: calc(35% - 2rem);
+        display: inline;
+    }
+    .tamano {
+        display: none;
+    }
 }

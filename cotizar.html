@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy-Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef94dd43d5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="site-header inicio parallax">
+        <div class="contenedor contenedor-site">
+            <div class="barra">
+                <a href="index.html">
+                    <!--<img src="img/LogoCopy.png" alt="LogoCopy" class="no-margin logo">-->
+                    <img src="img/LogoCopy2.png" alt="LogoCopy" class="no-margin">
+
+                </a>
+                <nav class="navegacion">
+                    <a href="index.html#nosotros">Nosotros</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+            </div>
+            <!-- Barra de enlaces-->
+            <div class="texto-header">
+                <h1>Cotizacion</h1>
+            </div>
+        </div>
+        <!--Contenedor-->
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="contenedor contenedor-cotizacion">
+        <div class="cotizador" id="cotizador">
+            <div class="botonesC">
+                <a class='boton boton-suma' id='add'><i class="fas fa-plus"></i></a>
+                <a class='boton' id='calcular'>Calcular</a>
+            </div>
+            <!--
+            <div class="pedido">
+                <div class="seleccion">
+                    <label for="trabajo">Trabajo: </label>
+                    <select name="trabajo" id="trabajo">
+                        <option value="0" selected disabled>Seleccione</option>
+                        <option value="copias">Copias</option>
+                        <option value="impresiones">Impresiones</option>
+                        <option value="encuadernado">Encuadernado</option>
+                        <option value="engargolado">Engargolado</option>
+                        <option value="tabloides">Tabloide</option>
+                        <option value="engomados">Engomado</option>
+                    </select>
+                    <label for="tamano" id='ltamano'>Tamaño: </label>
+                    <select name="tamano" id="tamano">
+                        <option value="0" selected disabled>Seleccione</option>
+                        <option value="carta">Carta</option>
+                        <option value="oficio">Oficio</option>
+                        <option value="doblecarta">Doble Carta</option>
+                    </select>
+                </div>
+                <div class="cant">
+                    <label for="cantidad">Cantidad: </label>
+                    <input type="number" min='0' id='cantidad' placeholder="cantidad">
+                </div>
+            </div>
+-->
+
+        </div>
+        <!-- Cotizador-->
+        <div class="resultado">
+            <div class="resumen" id="resumen">
+                <p>Descripcion:</p>
+                <p id="descripcion"></p>
+            </div>
+            <!-- Descripcion -->
+            <div class="total" id="total">
+                <p>Total: </p>
+                <p class="suma"></p>
+            </div>
+            <!-- Total -->
+        </div>
+        <!--- Resultado --->
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p>Copy-shop 2020</p>
+        </div>
+    </footer>
+    <script src="js/contacto.js"></script>
+</body>
+
+</html>
