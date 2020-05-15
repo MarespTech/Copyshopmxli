@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="servicios parallax">
+    <div class="servicios parallax" id="servicios">
         <div class="contenedor">
             <h2 class="fw-300 centrar">Servicios</h2>
             <p class="texto-servicios">Servicio de copias, impresiones, encuadernados y engargolados, todo al mejor precio con la mejor calidad</p>

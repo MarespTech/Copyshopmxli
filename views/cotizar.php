@@ -4,10 +4,12 @@
 <div class="contenedor contenedor-cotizacion">
         <div class="cotizador" id="cotizador">
             <div class="botonesC">
-                <a class='boton boton-suma' id='add'><i class="fas fa-plus"></i></a>
-                <a class='boton' id='calcular'>Calcular</a>
-            </div>
+                <a class='boton boton-suma' id='add'><i class="fas fa-plus"></i> Agregar</a>
+                <a class='boton' id='calcular'><i class="fas fa-equals"></i> Calcular</a>
 
+                <a class='boton boton-suma' id='reset'><i class="fas fa-trash-alt"></i> Reset</a>
+            </div>
+    
         </div>
         <!-- Cotizador-->
         <div class="resultado">
