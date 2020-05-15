@@ -3,9 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     var agregar = document.querySelector('#add');
     var calc = document.querySelector('#calcular');
     var cotizador = document.querySelector('#cotizador');
+    var reset = document.querySelector('#reset');
+    var descripcion = document.querySelector('#descripcion');
+    var total = document.querySelector('.suma');
+
+    console.log(reset);
 
     agregar.addEventListener('click', nuevoPedido);
     calc.addEventListener('click', calcular);
+    reset.addEventListener('click', limpiar);
+
+
 
 
     var x = 1;
@@ -114,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calcular() {
-        var descripcion = document.querySelector('#descripcion');
         descripcion.textContent = "";
         var suma = 0;
         for (var i = 1; i < x; i++) {
@@ -159,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 suma += cantidad * 13.5;
 
 
-            document.querySelector('.suma').textContent = '$' + suma;
+            total.textContent = '$' + suma;
 
         }
     }
@@ -178,6 +185,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function limpiar() {
+        console.log("Limpiar");
+        x = 1;
+
+        var pedidos = document.querySelectorAll('.pedido');
+        for (var i = 0; i < pedidos.length; i++) {
+            cotizador.removeChild(pedidos[i]);
+        }
+        descripcion.textContent = "";
+        total.textContent = "";
+
+    }
 
 
 });
