@@ -28,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         var select = document.createElement('select');
         select.setAttribute('name', 'trabajo' + x);
         select.setAttribute('id', 'trabajo' + x);
+        select.setAttribute('data-id', x);
         select.addEventListener('change', function() {
-            mostrarTam(this)
+            mostrarTam(this.value, this);
         });
         seleccion.appendChild(select);
         var option = document.createElement('option');
@@ -55,16 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         option.textContent = 'Engargolado';
         select.appendChild(option);
         var option = document.createElement('option');
-        option.setAttribute('value', 'tabloides');
+        option.setAttribute('value', 'tabloide');
         option.textContent = 'Tabloides';
         select.appendChild(option);
         var option = document.createElement('option');
-        option.setAttribute('value', 'engomados');
+        option.setAttribute('value', 'engomado');
         option.textContent = 'Engomados';
         select.appendChild(option);
 
         var label = document.createElement('label');
         label.setAttribute('for', 'tamano' + x);
+        label.setAttribute('id', 'ltamano' + x);
         label.setAttribute('class', 'tamano');
         label.textContent = 'Tamaño: ';
         seleccion.appendChild(label);
@@ -112,12 +114,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calcular() {
+        var descripcion = document.querySelector('#descripcion');
+        descripcion.textContent = "";
+        var suma = 0;
+        for (var i = 1; i < x; i++) {
+            var cantidad = document.querySelector('#cantidad' + i).value;
+            var trabajo = document.querySelector('#trabajo' + i).value;
+            if (trabajo == 'copias' || trabajo == 'impresiones')
+                var tamano = document.querySelector('#tamano' + i).value;
+
+            if (cantidad == '')
+                cantidad = 0;
+            var li = document.createElement('li');
+            if (trabajo == 'copias' || trabajo == 'impresiones')
+                li.textContent = cantidad + 'x ' + trabajo + ' tamaño ' + tamano;
+            else
+                li.textContent = cantidad + 'x ' + trabajo;
+            descripcion.appendChild(li);
+
+            if (trabajo == 'copias') {
+                if (tamano == 'carta')
+                    suma += cantidad * .25;
+                else if (tamano == 'oficio')
+                    suma += cantidad * .35;
+                else if (tamano == 'doblecarta')
+                    suma += cantidad * 1;
+            } else if (trabajo == 'impresiones') {
+                if (tamano == 'carta')
+                    suma += cantidad * .35;
+                else if (tamano == 'oficio')
+                    suma += cantidad * .60;
+                else if (tamano == 'doblecarta')
+                    suma += cantidad * 2;
+            } else if (trabajo == 'encuadernado')
+                suma += cantidad * 26;
+            else if (trabajo == 'engargolado')
+                suma += cantidad * 15;
+            else if (trabajo == 'tabloide') {
+                if (cantidad == 1)
+                    suma += cantidad * 7;
+                else
+                    suma += cantidad * 6;
+            } else if (trabajo == 'engomado')
+                suma += cantidad * 13.5;
+
+
+            document.querySelector('.suma').textContent = '$' + suma;
+
+        }
+    }
+
+    function mostrarTam(valor, obje) {
+        var id = obje.getAttribute('data-id');
+        if ((valor == 'copias' || valor == 'impresiones') && screen.width > 786) {
+            document.querySelector('#ltamano' + id).style.display = 'inline';
+            document.querySelector('#tamano' + id).style.display = 'inline';
+            document.querySelector('#trabajo' + id).style.width = '10rem';
+        } else if (screen.width > 786) {
+            document.querySelector('#ltamano' + id).style.display = 'none';
+            document.querySelector('#tamano' + id).style.display = 'none';
+            document.querySelector('#trabajo' + id).style.width = '30rem';
+        }
 
     }
 
-    function mostrarTam(id) {
-        console.log(id);
-    }
 
 
 });

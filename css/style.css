@@ -180,7 +180,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    height: 35rem;
+    height: auto;
 }
 
 .servicios h2 {
@@ -198,7 +198,7 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 700;
     padding: 1rem 3rem;
-    margin-top: 3rem;
+    margin: 3rem 0 1.5rem 0;
     background-color: #8f00e2;
     text-align: center;
     text-decoration: none;
@@ -235,7 +235,7 @@ a:hover {
 .contacto {
     background-color: black;
     color: #ffffff;
-    height: 60rem;
+    height: auto;
     margin: 0;
 }
 
@@ -429,4 +429,8 @@ a:hover {
     .tamano {
         display: none;
     }
+}
+
+.total p {
+    display: inline;
 }
