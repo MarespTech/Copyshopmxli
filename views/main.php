@@ -32,3 +32,15 @@
             <a href="index.php?page=cotizador" class="boton">Haz tus cotizaciones en linea aqui</a>
         </div>
     </div>
+    <div class="map" id="map" style="height: 500px;">
+    </div>
+
+    <script>
+        var map = L.map('map').setView([32.628397, -115.434133], 18);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([32.628397, -115.434133]).addTo(map)
+            .bindPopup('CopyShop')
+            .openPopup();
+    </script>

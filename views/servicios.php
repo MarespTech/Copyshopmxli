@@ -17,7 +17,7 @@
         <section class="servicio">
             <h2 class="centrar no-margin">Encuadernado y <br> Engargolado</h2>
             <img src="img/servicio3.png" alt="Servicio Enc/Eng" class="center-img">
-            <p class="centrar">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates velit dolore illo. Culpa cupiditate molestias voluptatem incidunt, quam at ad quas nesciunt error! Ad nam veniam sequi maxime dolores officiis!</p>
+            <p class="centrar">Engargola o encuaderna tus trabajos, desde 10 hojas hasta 400 hojas.</p>
         </section>
         <!-- Enc/Eng -->
         <section class="servicio">
