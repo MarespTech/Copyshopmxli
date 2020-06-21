@@ -8,12 +8,12 @@ The pages was created using html, css and javascript only.
 
 ## Photos
 Main page:
-![Main page](https://imgur.com/6dhmed0)
-![Main page part 2](https://imgur.com/sM6p4yp)
-![Main page part 3](https://imgur.com/gxtuL45)
+![Main page](https://i.imgur.com/6dhmed0m.png)
+![Main page part 2](https://i.imgur.com/J7sDmM2.png)
+![Main page part 3](https://i.imgur.com/K2wOdl9.png)
 
 Services page:
-![Services page](https://imgur.com/h7rwR5N)
+![Services page](https://i.imgur.com/vvB14id.png)
 
 Cotization page:
-![Cotization page](https://imgur.com/hb3NSir)
+![Cotization page](https://imgur.com/hb3NSir.png)
